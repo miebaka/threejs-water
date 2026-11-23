@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="has-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d6e9e8">
+  <title>Water — An interactive Three.js study by Miebaka Joshua</title>
+  <meta name="description" content="An interactive WebGL water, ripple, refraction, and caustics experiment by Miebaka Joshua.">
+  <link rel="stylesheet" href="styles/demo.css">
+</head>
+<body data-page="home">
+  <main>
+    <section class="home-landing" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="topline"><span>Miebaka Joshua / Experiments</span>
+          <button id="switch-theme" type="button" aria-pressed="false">Dark water</button>
+        </div>
+        <div class="hero-text">
+          <p>Interactive fluid / WebGL2</p>
+          <h1 id="hero-title">Water, in motion.</h1>
+          <p>Move your pointer or touch the surface to create a ripple.</p>
+        </div>
+        <p class="bottomline">Reduced-motion and WebGL2 fallbacks included.</p>
+      </div>
+    </section>
+  </main>
+  <script type="module">
+    import { initHeroWave } from "./js/core/hero-wave.js";
+    const toggle = document.getElementById("switch-theme");
+    toggle.addEventListener("click", () => {
+      const dark = document.documentElement.dataset.theme !== "dark";
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      toggle.setAttribute("aria-pressed", String(dark));
+      toggle.textContent = dark ? "Light water" : "Dark water";
+    });
+    void initHeroWave();
+  </script>
+</body>
+</html>

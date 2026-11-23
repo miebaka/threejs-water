@@ -6,10 +6,10 @@ The original source, physics/caustic shader, pointer and touch interaction, paus
 
 ## Run locally
 
-Requires Node.js 24.
+Requires Node.js 24. The committed lockfile pins the build dependencies and GitHub Actions checks the build on every push.
 
 ```sh
-npm install
+npm ci
 npm run build
 npm run dev
 ```

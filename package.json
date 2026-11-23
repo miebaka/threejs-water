@@ -1,0 +1,21 @@
+{
+  "name": "threejs-water-study",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone interactive Three.js water and caustics study extracted from Miebaka Joshua's portfolio.",
+  "scripts": {
+    "build": "node scripts/build-hero-wave.mjs",
+    "dev": "npm run build && node scripts/serve-static.mjs",
+    "start": "node scripts/serve-static.mjs"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
